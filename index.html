@@ -70,10 +70,10 @@
 
 <div class="container">
   <h1>Testy – Ochrona lotnictwa cywilnego</h1>
-<p style="text-align:center; color:#555; margin-top:10px;">
-  👁️ Liczba odwiedzin: <span id="visitCount">–</span>
-</p>
 
+<div style="text-align:center; margin-top:10px;">
+  <img src="https://hits.dwyl.com/hubaki/ulc-test.svg" alt="Odwiedziny">
+</div>
 
   <div class="blocks" id="menu">
     <button class="block-btn" onclick="startBlock(1)">Blok 1 (1–40)</button>
@@ -2389,20 +2389,8 @@ function prevQuestion() {
     loadQuestion();
   }
 }
-const COUNT_NAMESPACE = "hubaki";
-const COUNT_KEY = "ulc-test";
-
-fetch(`https://api.countapi.xyz/hit/${COUNT_NAMESPACE}/${COUNT_KEY}`)
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("visitCount").textContent = data.value;
-  })
-  .catch(() => {
-    document.getElementById("visitCount").textContent = "—";
-  });
 
 showMenu();
 </script>
 </body>
-
 </html>
