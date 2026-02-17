@@ -2389,8 +2389,8 @@ function prevQuestion() {
     loadQuestion();
   }
 }
-const COUNT_NAMESPACE = "Hubaki";
-const COUNT_KEY = "https://hubaki.github.io/ulc-test/";
+const COUNT_NAMESPACE = "hubaki";
+const COUNT_KEY = "ulc-test";
 
 fetch(`https://api.countapi.xyz/hit/${COUNT_NAMESPACE}/${COUNT_KEY}`)
   .then(res => res.json())
